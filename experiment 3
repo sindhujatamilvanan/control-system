@@ -1,0 +1,45 @@
+clear;
+
+--> num=poly([1],'s','coeff');
+
+--> den=poly([2 1],'s','coeff');
+
+--> g=syslin('c',num/den);
+
+--> disp(g,'the given first order system function G=');
+
+ the given first order system function G=
+
+
+           
+     1     
+   ------  
+           
+   2 + s   
+
+
+--> t=0:0.05:50;
+
+--> gs=csim('step',t,g);
+
+--> subplot(121)
+
+--> plot2d(t,gs)
+
+--> xlabel('time {t} sec')
+
+--> ylabel('step response {c(t)}')
+
+--> title('step response of a first order system')
+
+--> gi=csim('impulse',t,g);
+
+--> subplot(122)
+
+--> plot2d(t,gi)
+
+--> xlabel('time {t} sec')
+
+--> ylabel('impulse response{c(t)}')
+
+--> title('impulse response of a first order system')
