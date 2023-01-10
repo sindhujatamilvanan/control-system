@@ -1,0 +1,96 @@
+Startup execution:
+  loading initial environment
+
+--> clear;
+
+--> s=%s;
+
+--> z=0;
+
+--> num=36; den=36+2*z*s+s^2;
+
+--> TF=syslin('c',num,den);
+
+--> subplot(221)
+
+--> t=0:0.1:10;
+
+--> y1=csim('step',t,TF);
+
+--> plot(t,y1)
+
+--> xlabel('time {t} sec')
+
+--> ylabel('system response {c(t)}')
+
+--> title('undampes system');
+
+--> 
+
+--> z=0.5;
+
+--> num=36; den=36+2*z*s+s^2;
+
+--> TF=syslin('c',num,den);
+
+--> subplot(222)
+
+--> t=0:0.1:10;
+
+--> y2=csim('step',t,TF);
+
+--> plot(t,y2)
+
+--> xlabel('time {t} sec')
+
+--> ylabel('system response{c(t)}')
+
+--> title('underdamped system');
+
+--> 
+
+--> z=1;
+
+--> num=36; den=36+2*z*s+s^2;
+
+--> TF=syslin('c',num,den);
+
+--> subplot(223)
+
+--> t=0:0.1:10;
+
+--> y3=csim('step',t,TF);
+
+--> xlabel('time {t} sec')
+
+--> ylabel('system response {c(t)}')
+
+--> plot(t,y1)
+
+--> title('critically dampes system');
+
+--> 
+
+--> 
+
+--> z=10;
+
+--> num=36;den=36+2*z*s+s^2;
+
+--> TF=syslin('c',num,den);
+
+--> subpot(224)
+
+Undefined variable: subpot
+
+--> t=0:0.1:10;
+
+--> y4=csim('step',t,TF);
+
+--> plot(t,y4)
+
+--> xlabel('time {t} sec')
+
+--> ylabel('system response {c(t)}')
+
+--> title('over damped system');
