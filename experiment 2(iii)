@@ -1,0 +1,16 @@
+Startup execution:
+  loading initial environment
+
+--> clc;
+
+--> clear;
+
+--> s=%s;
+
+--> n=[2+3*s+4*s^2];
+
+--> d=[1+s+s^2];
+
+--> h=syslin("c",n,d);
+
+--> plzr(h);
